@@ -3,9 +3,12 @@ module CardConnect
     class InquireResponse
       include Utils
 
-      FIELDS = [:merchid, :account, :amount, :currency, :retref, :respcode,
-                :respproc, :respstat, :resptext, :setlstat].freeze
-                
+      FIELDS = [
+        :merchid, :account, :amount, :currency, :retref, :respcode,
+        :respproc, :respstat, :resptext, :setlstat, :capturedate, :batchid,
+        :token, :authdate, :lastfour, :name, :currency, :settledate
+      ].freeze
+
       # Settlement Status
       AUTHORIZED = 'Authorized' # Txn has not been Captured
       QUEUED = 'Queued for Capture' # Txn is in flight to Clearing House

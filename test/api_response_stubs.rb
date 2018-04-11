@@ -39,7 +39,14 @@ def valid_inquire_response # rubocop:disable Metrics/MethodLength
     'account' => '41XXXXXXXXXX4113',
     'respproc' => 'FNOR',
     'respstat' => 'A',
-    'currency' => 'USD'
+    'currency' => 'USD',
+    'token' => '9418594164541111',
+    'authdate' => '20180410',
+    'lastfour' => '1111',
+    'name' => '',
+    'capturedate' => nil,
+    'batchid' => nil,
+    'settledate' => nil
   }
 end
 
