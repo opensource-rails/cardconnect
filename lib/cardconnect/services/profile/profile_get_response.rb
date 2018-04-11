@@ -3,8 +3,10 @@ module CardConnect
     class ProfileGetResponse
       include Utils
 
-      FIELDS = [:profileid, :acctid, :respstat, :account, :respcode, :resptext, :respproc, :accttype, :expiry,
-                :name, :address, :city, :region, :country, :phone, :postal, :ssnl4, :email, :defaultacct, :license, :token]
+      FIELDS = [:gsacard, :profileid, :acctid, :respstat, :account,
+        :respcode, :resptext, :respproc, :accttype, :expiry,
+        :name, :address, :city, :region, :country, :phone, :postal,
+        :ssnl4, :email, :defaultacct, :license, :token, :auoptout]
 
       attr_accessor(*FIELDS)
       attr_reader :errors
