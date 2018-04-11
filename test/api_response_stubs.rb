@@ -115,7 +115,9 @@ def valid_profile_get_response #rubocop:disable Metrics/MethodLength
     "city" => "ANYTOWN",
     "expiry" => "0214",
     "profileid" => "12345678901234567890",
-    "acctid" => "1"
+    "acctid" => "1",
+    "gsacard" => "N",
+    "auoptout" => "N"
   }
 end
 
