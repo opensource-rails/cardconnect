@@ -6,13 +6,12 @@ module CardConnect
       FIELDS = [:gsacard, :profileid, :acctid, :respstat, :account,
         :respcode, :resptext, :respproc, :accttype, :expiry,
         :name, :address, :city, :region, :country, :phone, :postal,
-        :ssnl4, :email, :defaultacct, :license, :token, :auoptout
-      ]
+        :ssnl4, :email, :defaultacct, :license, :token, :auoptout]
 
       attr_accessor(*FIELDS)
       attr_reader :errors
 
-      STATUS_APPROVED = 'A'
+      STATUS_APPROVED  = 'A'
       STATUS_NOT_FOUND = 'C'
 
       def initialize(response)
@@ -26,11 +25,7 @@ module CardConnect
       end
 
       def body
-        body = {}
-        FIELDS.each do |attr|
-          body.merge!({attr => send(attr)})
-        end
-        body
+        FIELDS.collect{|attr| {attr => send(attr)} }.reduce({}, :merge)
       end
 
       private
